@@ -1,0 +1,680 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* basic styles for Navbar */
+
+nav {
+background-color: rgb(16, 6, 3);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+span{
+    color: orangered;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effects */
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color:rgba(255, 166, 0, 0.628);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+ /* orangered on hover */
+.nav-links a:hover {
+  color:orangered;
+}
+
+
+/* making Navbar responsive for smaller screen*/
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    margin: 0.5rem 0;
+  }
+}
+/* home section css*/
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #fff;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 100px;
+}
+
+/* image container css */
+
+.Home .img {
+  display: flex;
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.Home .img img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* hoover effect for the image */
+.Home .img img:hover {
+  transform: scale(1.05);
+}
+
+/* text css for the home section */
+.home-container {
+  flex: 1 1 400px;
+  text-align: left;
+}
+
+.home-container h3 {
+  font-size: 2.5rem;
+  color: orangered;
+  margin-bottom: 0.5rem 0;
+  font-weight: bold;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.home-container h1 span {
+  color: orangered;
+}
+
+.home-container p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* responsive css for small screen in home section */
+
+@media (max-width: 768px) {
+  .Home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-container {
+    text-align: center;
+  }
+
+  .home-container h1 {
+    font-size: 2rem;
+  }
+
+  .home-container p {
+    font-size: 0.95rem;
+  }
+}
+/* css for button container */
+
+.home-buttons {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+/* base style for button */
+.btn {
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hire me button style */
+
+.btn.hire {
+  background-color: orangered;
+  color: white;
+  border-color: orangered;
+}
+
+.btn.hire:hover {
+  background-color: #cc3700;
+  border-color: #cc3700;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+}
+
+/*  resume button style * */
+
+.btn.resume {
+  background-color: white;
+  color: orangered;
+  border: 2px solid orangered;
+}
+
+.btn.resume:hover {
+  background-color: orangered;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.2);
+}
+
+/* responsive for the Buttons */
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* style for about section */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+.about-section h2 {
+  color: orangered;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+ .about-text {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+.about-text strong {
+  color: orangered;
+}
+
+.about-skills {
+  flex: 1;
+  background: #fff;
+  border-left: 4px solid orangered;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-skills h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: orangered;
+}
+
+.about-skills ul {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 600;
+}
+
+.about-skills li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.about-skills li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: orangered;
+  font-size: 0.9rem;
+}
+
+/*responsive style for about */
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text,
+  .about-skills {
+    flex: 1 1 100%;
+  }
+
+  .about-section {
+    text-align: center;
+  }
+}
+
+/* style for Education Section */
+
+.education-section {
+  padding: 4rem 2rem;
+  background-color: #fefefe;
+  color: #333;
+}
+
+.education-section h2 {
+  color: orangered;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.education-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* style for Education Card */
+
+.edu-card {
+  background: white;
+  border-left: 4px solid orangered;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+/* /* hover effect for education section  */
+.edu-card:hover {
+  transform: translateY(-5px);
+}
+
+.edu-card h3 {
+  font-size: 1.3rem;
+  color: #111;
+  margin-bottom: 0.4rem;
+}
+
+.edu-institution {
+  font-weight: bold;
+  color: #555;
+}
+
+.edu-year {
+  font-size: 0.95rem;
+  color: orangered;
+  margin-bottom: 0.8rem;
+}
+
+.edu-achievement {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* responsive style for small screen in education section */
+
+
+@media (max-width: 768px) {
+  .education-container {
+    padding: 0 1rem;
+  }
+
+  .edu-card {
+    padding: 1rem;
+  }
+}
+
+/* interest Section */
+
+.interest-section {
+  padding: 4rem 2rem;
+  background-color: #fffdfc;
+  color: #222;
+}
+
+.interest-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: orangered;
+  margin-bottom: 2.5rem;
+}
+
+.interest-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* style for interest card */
+
+.interest-card {
+  background-color: white;
+  border-left: 4px solid orangered;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+/*hover style for interest */
+
+.interest-card:hover {
+  transform: translateY(-6px); /*hover style for interest section */
+}
+
+
+.interest-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #111;
+}
+.interest-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* responsive for smaller screen interest section */
+@media (max-width: 600px) {
+  .interest-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* project section style */
+
+.project-section {
+  padding: 4rem 2rem;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  color: orangered;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+/* project card style */
+
+.project-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+/* project card heading 3 style */
+
+.project-card h3 {
+  color: orangered;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* project description style */
+
+.project-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* hover effect project section */
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: orangered;
+}
+
+/* fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive tweak */
+
+@media (max-width: 700px) {
+  .project-section {
+    padding: 2rem 1rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+}
+
+/* styling for contact section */
+
+.contact-section {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  color: orangered;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* /* styling form  */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: orangered;
+  box-shadow: 0 0 6px rgba(255, 69, 0, 0.3);
+}
+
+/* stying button in Contact section */
+
+.contact-form button {
+  padding: 0.9rem;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #af4322;
+}
+
+/* responsive spacing */
+
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 3rem 1rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+  }
+}
+
+/* footer styling */
+
+.footer {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: auto;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.social-links {
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  margin: 0 0.6rem;
+  color: orangered;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff; /* hover effect for footer */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
